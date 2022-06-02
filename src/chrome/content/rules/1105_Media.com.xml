@@ -1,0 +1,46 @@
+
+<!--
+The following targets have been disabled at 2020-04-17 18:38:06:
+
+Fetch error: http://www.1105media.com/ => https://www.1105media.com/: (60, 'SSL certificate problem: self signed certificate in certificate chain')
+
+	Other 1105 Media rulesets:
+
+		- ADTmag.com.xml
+		- AWSInsider.net.xml
+		- campustechnology.com.xml
+		- ESJ.com.xml
+		- FCW.com.xml
+		- MCPmag.com.xml
+		- RCPmag.com.xml
+		- Redmondmag.com.xml
+		- Virtualization_Review.com.xml
+
+
+	Insecure cookies are set for these hosts:
+
+		- 1105media.com
+		- design.1105media.com
+		- www.1105media.com
+
+-->
+<ruleset name="1105 Media.com">
+
+	<!--	Direct rewrites:
+				-->
+	<target host="1105media.com" />
+	<target host="design.1105media.com" />
+	<!-- target host="www.1105media.com" /-->
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(?:design\.|www\.)?1105media\.com$" name="^BIGipServer" /-->
+
+	<securecookie host="^\w" name=".+" />
+
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

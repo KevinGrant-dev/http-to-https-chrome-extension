@@ -1,0 +1,21 @@
+<!--
+	Non-functional hosts:
+		Mismatched:
+		- www.bornthisway.foundation
+
+-->
+<ruleset name="Born This Way Foundation (partial)">
+
+	<target host="bornthisway.foundation" />
+	<target host="www.bornthisway.foundation" />
+	<target host="secure.bornthisway.foundation" />
+	<target host="shop.bornthisway.foundation" />
+
+	<securecookie host=".+" name=".+" />
+	
+	<rule from="^http://www\.bornthisway\.foundation/"
+		  	to="https://bornthisway.foundation/" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

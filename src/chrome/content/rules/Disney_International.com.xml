@@ -1,0 +1,20 @@
+<!--
+	Other Disney rulesets:
+
+		- Dilcdn.com.xml
+		- Disney.co.jp.xml
+
+
+	Fully covered subdomains:
+
+		- analytics
+
+-->
+<ruleset name="Disney International.com (partial)">
+
+	<target host="analytics.disneyinternational.com" />
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

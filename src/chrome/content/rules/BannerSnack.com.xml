@@ -1,0 +1,16 @@
+<!--
+	For other SnackTools coverage, see SnackTools.com.xml.
+
+	Non-functional hosts:
+		Mismatched:
+		- files.bannersnack.com
+
+-->
+<ruleset name="BannerSnack.com">
+	<target host="bannersnack.com" />
+	<target host="www.bannersnack.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

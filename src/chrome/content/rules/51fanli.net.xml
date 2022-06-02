@@ -1,0 +1,34 @@
+
+<!--
+The following targets have been disabled at 2020-09-25 16:20:22:
+
+Fetch error: http://static.51fanli.net/ => https://static.51fanli.net/: (60, 'SSL certificate problem: unable to get local issuer certificate')
+
+	For other Fanli coverage, see Fanli.com.xml.
+
+  Expired Certificate:
+    imagefile.51fanli.net
+-->
+
+<ruleset name="51fanli.net">
+	<target host="51fanli.net" />
+	<target host="imagefile2.51fanli.net" />
+	<target host="l0.51fanli.net" />
+	<target host="l1.51fanli.net" />
+	<target host="l2.51fanli.net" />
+	<target host="l3.51fanli.net" />
+	<target host="l4.51fanli.net" />
+	<target host="spic0.51fanli.net" />
+	<target host="spic1.51fanli.net" />
+	<target host="spic2.51fanli.net" />
+	<target host="spic3.51fanli.net" />
+	<target host="spic4.51fanli.net" />
+	<target host="spic5.51fanli.net" />
+	<!-- target host="static.51fanli.net" /-->
+	<target host="static2.51fanli.net" />
+	<target host="www.51fanli.net" />
+
+	<securecookie host="^\w" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,24 @@
+<!--
+	Non-functional hosts
+		Timeout was reached:
+		- go.cloudera.com
+
+		SSL connect error:
+		- ccp.cloudera.com
+
+		SSL peer certificate was not OK:
+		- files.cloudera.com
+		- images.go.cloudera.com
+-->
+<ruleset name="Cloudera.com">
+	<target host="cloudera.com" />
+	<target host="blog.cloudera.com" />
+	<target host="community.cloudera.com" />
+	<target host="university.cloudera.com" />
+	<target host="vision.cloudera.com" />
+	<target host="www.cloudera.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

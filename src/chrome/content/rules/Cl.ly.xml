@@ -1,0 +1,17 @@
+<!--
+	Non-functional hosts
+		SSL peer certificate was not OK:
+		- f.cl.ly
+
+		Different content:
+		- api.cl.ly
+-->
+<ruleset name="cl.ly">
+	<target host="cl.ly" />
+	<target host="my.cl.ly" />
+	<target host="www.cl.ly" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

@@ -1,0 +1,48 @@
+
+<!--
+The following targets have been disabled at 2020-04-17 18:38:06:
+
+Fetch error: http://element14.com/ => https://element14.com/: (28, 'Operation timed out after 30001 milliseconds with 0 bytes received')
+Fetch error: http://www.element14.com/ => https://www.element14.com/: (28, 'Operation timed out after 30001 milliseconds with 0 bytes received')
+Fetch error: http://beta.element14.com/ => https://beta.element14.com/: (28, 'Operation timed out after 30001 milliseconds with 0 bytes received')
+
+	Element14.com related ruleset,
+
+	Non-functional hosts
+		Timeout was reached:
+			 - click.e-marketing.element14.com
+			 - mta.e-marketing.element14.com
+			 - view.e-marketing.element14.com
+			 - www.in.ftprdap.element14.com
+
+		SSL peer certificate was not OK:
+			 - m.element14.com
+			 - metrics.element14.com
+			 - us.element14.com
+
+		Peer certificate cannot be authenticated with given CA certificates:
+			 - downloads.element14.com
+			 - piregistration.element14.com
+
+		Incomplete certificate chain error:
+			 - planet.element14.com
+
+		Secure connection redirects to plaintext:
+			 - partner.element14.com
+
+		Status code mismatch:
+			 - files1.element14.com
+			 - files1beta.element14.com
+
+		Mixed Content Blocking (MCB) tiggered:
+			 - See Element14.com-Mixed.xml
+-->
+<ruleset name="Element14.com">
+	<!-- target host="element14.com" /-->
+	<!-- target host="www.element14.com" /-->
+	<target host="api.element14.com" />
+		<test url="http://api.element14.com/pffind/services/SearchService?wsdl" />
+	<!-- target host="beta.element14.com" /-->
+
+	<rule from="^http:" to="https:" />
+</ruleset>

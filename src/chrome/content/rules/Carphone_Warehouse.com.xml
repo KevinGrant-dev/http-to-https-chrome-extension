@@ -1,0 +1,85 @@
+<!--
+	Other Carphone Warehouse rulesets:
+
+
+
+	Nonfunctional hosts in *carphonewarehouse.com:
+
+		- images *
+    - m.carphonewarehouse.com
+    - selfhelp.carphonewarehouse.com
+
+	* 403
+
+
+	Problematic hosts in *carphonewarehouse.com:
+
+		- metrics ᵐ
+
+	ᵐ Mismatched
+
+
+	Insecure cookies are set for these domains and hosts:
+
+		- .carphonewarehouse.com
+		- .business.carphonewarehouse.com
+		- selfhelp.carphonewarehouse.com
+
+
+	Mixed content:
+
+		- Images on selfhelp from media.phonehouse.com *
+
+	* Secured by us
+
+-->
+<ruleset name="Carphone Warehouse.com (partial)">
+
+	<!--	Direct rewrites:
+				-->
+	<target host="carphonewarehouse.com" />
+	<target host="business.carphonewarehouse.com" />
+	<target host="www.carphonewarehouse.com" />
+
+	<!--	Complications:
+				-->
+	<target host="metrics.carphonewarehouse.com" />
+
+		<!--	Redirects to http:
+						-->
+		<!--exclusion pattern="^http://(?:www\.)?carphonewarehouse\.com/(?:basket$|mobiles/trade-in$)" /-->
+		<!--
+			Exceptions:
+					-->
+		<exclusion pattern="^http://(?:www\.)?carphonewarehouse\.com/(?!cpwtrade\.css|favicon\.ico)" />
+
+			<!--	+ve:
+					-->
+			<test url="http://carphonewarehouse.com/basket" />
+			<test url="http://www.carphonewarehouse.com/help-support" />
+			<test url="http://www.carphonewarehouse.com/mobiles/trade-in" />
+			<test url="http://www.carphonewarehouse.com/support/track-a-repair" />
+
+			<!--	-ve:
+					-->
+			<test url="http://carphonewarehouse.com/cpwtrade.css" />
+			<test url="http://www.carphonewarehouse.com/favicon.ico" />
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^\.business\.carphonewarehouse\.com$" name="^cp(?:cic|cv|fv|vc)$" /-->
+	<!--securecookie host="^selfhelp\.carphonewarehouse\.com$" name="^JSESSIONID$" /-->
+
+	<securecookie host="^\." name="^s_v" />
+	<securecookie host="^(?!m\.|www\.)\w" name=".+" />
+	<securecookie host="^\.business\." name=".+" />
+
+
+	<rule from="^http://metrics\.carphonewarehouse\.com/"
+		to="https://carphonewarehouse.sc.omtrdc.net/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

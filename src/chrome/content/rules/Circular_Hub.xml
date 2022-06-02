@@ -1,0 +1,16 @@
+<!--
+	Non-functional hosts
+		SSL connect error:
+		- api.circularhub.com
+		- editorials.circularhub.com
+-->
+<ruleset name="Circular Hub">
+
+	<target host="circularhub.com" />
+	<target host="www.circularhub.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

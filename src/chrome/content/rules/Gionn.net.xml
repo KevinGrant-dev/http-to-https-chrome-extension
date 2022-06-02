@@ -1,0 +1,23 @@
+<!--
+	www.gionn.net: Unresolved
+
+	Insecure cookies are set for these domains:
+
+		- .gionn.net
+-->
+<ruleset name="gionn.net">
+
+	<!--	Direct rewrites:
+				-->
+	<target host="gionn.net" />
+
+	<!--	CloudFlare cookies:
+					-->
+	<!--securecookie host="^\.gionn\.net$" name="^(?:__cfduid|cf_clearance)$" /-->
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

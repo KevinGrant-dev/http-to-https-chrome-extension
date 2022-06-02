@@ -1,0 +1,42 @@
+
+<!--
+The following targets have been disabled at 2020-04-17 18:38:06:
+
+Fetch error: http://affiliate.chitika.com/ => https://affiliate.chitika.com/: (7, 'Failed to connect to affiliate.chitika.com port 443: No route to host')
+Fetch error: http://blog.chitika.com/ => https://blog.chitika.com/: (35, 'error:1408F10B:SSL routines:ssl3_get_record:wrong version number')
+Fetch error: http://publishers.chitika.com/ => https://publishers.chitika.com/: (6, 'Could not resolve host: publishers.chitika.com')
+
+	Other Chitika rulesets:
+
+
+
+	CDN buckets:
+
+		- chitika.assistly.com
+
+
+	Nonfunctional domains:
+
+		chitika.com subdomains:
+
+			- docs
+			- insights
+			- labs		(times out)
+			- support	(cert: *.assistly.com; 301s to http)
+
+-->
+<ruleset name="Chitika (partial)">
+
+	<target host="chitika.com" />
+	<target host="www.chitika.com" />
+	<!-- target host="affiliate.chitika.com" /-->
+	<!-- target host="blog.chitika.com" /-->
+	<!-- target host="publishers.chitika.com" /-->
+
+
+	<securecookie host=".+" name=".+"/>
+
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,18 @@
+<!--
+	Other Goodreads rulesets:
+		+ Gr-assets.com.xml
+
+	Non-functional hosts:
+		Mismatched:
+		- photo.goodreads.com
+
+-->
+<ruleset name="Goodreads.com">
+
+	<target host="goodreads.com"/>
+	<target host="www.goodreads.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:" to="https:" />
+</ruleset>

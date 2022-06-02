@@ -1,0 +1,19 @@
+<!--
+	Invalid certificate:
+		mobile.collegiatepeaksbank.com
+		cpbonlinebanking.com
+
+  Host unresolved:
+    cpbonlinebanking.com
+-->
+<ruleset name="Collegiate Peaks Bank">
+
+	<target host="collegiatepeaksbank.com" />
+	<target host="www.collegiatepeaksbank.com" />
+
+	<securecookie host=".+" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

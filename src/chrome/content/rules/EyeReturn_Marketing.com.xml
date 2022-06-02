@@ -1,0 +1,18 @@
+<!--
+	Other eyeReturn Marketing rulesets:
+
+
+
+	CDN buckets:
+
+		- ermi.wpengine.com
+
+-->
+<ruleset name="eyeReturn Marketing.com (partial)">
+
+	<target host="eyereturnmarketing.com" />
+	<target host="www.eyereturnmarketing.com" />
+
+  <rule from="^http:" to="https:" />
+
+</ruleset>

@@ -1,0 +1,18 @@
+<!--
+  Redirects to tonic.com
+	Other DNTX rulesets:
+
+	^: dropped
+
+-->
+<ruleset name="DNTX.com">
+
+	<target host="dntx.com" />
+	<target host="www.dntx.com" />
+
+
+	<securecookie host="^www\.dntx\.com$" name=".+" />
+
+  <rule from="^http:" to="https:" />
+
+</ruleset>

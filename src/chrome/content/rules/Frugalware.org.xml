@@ -1,0 +1,41 @@
+<!--
+	Invalid certficate:
+		darcs.frugalware.org
+		dors.frugalware.org
+		git.frugalware.org
+		lists.frugalware.org
+		packages.frugalware.org
+		planet.frugalware.org
+		wiki.frugalware.org
+    bugs.frugalware.org
+
+	Private subdomain:
+		webmail.frugalware.org
+
+	Non functional over https for various reasons:
+		www\d.frugalware.org
+		rsync\d.frugalware.org
+
+  Unresolved host:
+    - planet.frugalware.org
+
+-->
+<ruleset name="Frugalware.org">
+
+	<target host="frugalware.org" />
+	<target host="www.frugalware.org" />
+	<target host="lists.frugalware.org" />
+	<target host="packages.frugalware.org" />
+
+	<securecookie host="^.+\.frugalware\.org$" name=".+" />
+
+	<rule from="^http://lists\.frugalware\.org/"
+		to="https://frugalware.org/mailman/listinfo/" />
+
+	<rule from="^http://packages\.frugalware\.org/"
+		to="https://frugalware.org/packages/" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

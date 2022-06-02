@@ -1,0 +1,23 @@
+<!--
+	For other WebDevStudios coverage, see WebDevStudios.xml.
+
+	(www.)?ewebscapes.com: Mismatched
+	clientarea.ewebscapes.com: Expired
+
+-->
+<ruleset name="EWebScapes.com (partial)">
+
+	<!--	Complications:
+				-->
+	<target host="ewebscapes.com" />
+	<target host="www.ewebscapes.com" />
+
+	<!--	Redirect keeps path and args,
+		but not forward slash:
+					-->
+	<rule from="^http://(?:www\.)?ewebscapes\.com/+"
+		to="https://webdevstudios.com/" />
+
+		<test url="http://ewebscapes.com/?" />
+
+</ruleset>

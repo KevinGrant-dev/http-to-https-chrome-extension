@@ -1,0 +1,96 @@
+
+<!--
+Disabled by https-everywhere-checker because:
+Fetch error: http://adp.com/ => https://www.adp.com/: (28, 'Operation timed out after 0 milliseconds with 0 out of 0 bytes received')
+	Other Automatic Data Processing rulesets:
+
+		- ADP_Retirement_Services.xml
+		- ADP_Screening_and_Selection_Services.xml
+		- Apply2Jobs.com.xml
+		- ELabor.xml
+
+
+	Problematic subdomains:
+
+		- ^				(cert only matches www)
+		- (www.)accountant		(works; mismatched, CN: www.adp.com)
+		- www.adp4me			(certo only matches ^foo)
+		- (www.)dataaccessregistration	(no https)
+		- www.easynet			(cert only matches ^foo)
+		- edu				(cert only matches www.foo)
+		- flexdirect			(cert only matches www.foo)
+		- www.smallbusiness		(cert only matches ^foo)
+		- (www.)ilearn			(works; mismatched, CN: www.adp.com)
+		- (www.)virtualedge		(works; mismatched, CN: www.adp.com)
+
+
+	Partially covered subdomains:
+
+		- (www.)ilearn		(→ adpe.csod.com)
+
+
+	Fully covered subdomains:
+
+		- (www.)
+		- (www.)adp4me		(www → ^)
+		- (www.)adpvantage
+		- agateway
+		- cgateway
+		- clientcenter
+		- (www.)documax
+		- (www.)dataaccessregistration	(→ runpayroll)
+		- downtime2
+		- (www.)easynet		(www → ^)
+		- (www.)edu		(^ → www)
+		- eetime1
+		- (www.)etime
+		- ewallet
+		- (www.)ezlm
+		- (www.)flexdirect	(^ → www)
+		- glinterface
+		- (www.)ipay
+		- (www.)ipayadmin
+		- (www.)ireports
+		- (www.)netsecure
+		- (www.)paystatements
+		- (www.)payex
+		- payexag
+		- (www.)portal
+		- checkprint.pss
+		- yearend.pss
+		- (www.)quickview
+		- (www.)reporting
+		- resource-secure
+		- runpayroll
+		- (www.)select
+		- (www.)smallbusiness	(www → ^)
+		- (www.)support
+		- (www.)timesaver
+		- www.tlm
+		- totalsource
+		- (www.)virtualedge	(→ www)
+		- (www.)
+		- (www.)
+		- (www.)
+
+-->
+<ruleset name="Automatic Data Processing (partial)">
+
+	<target host="adp.com" />
+	<target host="*.adp.com" />
+    <test url="http://ipay.adp.com/" />
+    <test url="http://adpvantage.adp.com/" />
+    <test url="http://virtualaccess.adp.com/" />
+
+	<rule from="^http://(?:www\.)?(edu\.|flexdirect\.)?adp\.com/"
+		to="https://www.$1adp.com/" />
+
+	<rule from="^http://(?:www\.)?dataaccessregistration\.adp\.com/(?:.*)"
+		to="https://runpayroll.adp.com/default.aspx?action=newclient&amp;RAP=1" />
+
+	<rule from="^http://(?:www\.)?virtualedge\.adp\.com/(?:.*)"
+		to="https://www.adp.com/solutions/employer-services/pre-employment-services.aspx" />
+
+	<rule from="^http:" to="https:" />
+
+</ruleset>

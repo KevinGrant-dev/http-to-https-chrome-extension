@@ -1,0 +1,9 @@
+<ruleset name="Framasoft">
+        <target host="framadate.org" />
+        <target host="framindmap.org" />
+
+		<securecookie host=".+" name=".+" />
+
+        <rule from="^http:"
+                to="https:" />
+</ruleset>

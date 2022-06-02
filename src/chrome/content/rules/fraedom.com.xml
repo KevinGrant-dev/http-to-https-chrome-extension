@@ -1,0 +1,58 @@
+
+<!--
+The following targets have been disabled at 2020-09-25 16:20:22:
+
+Time: 2020-09-25 16:20:22
+ Fetch error: http://www2.fraedom.com/? => https://www.fraedom.com/: (6, 'Could not resolve host: www2.fraedom.com')
+Time: 2020-09-25 16:20:22
+ Fetch error: http://www2.fraedom.com/l/97782/2015-09-17/5r76f => https://pi.pardot.com/l/97782/2015-09-17/5r76f: (6, 'Could not resolve host: www2.fraedom.com')
+Time: 2020-09-25 16:20:22
+ Fetch error: http://www2.fraedom.com/ => https://www.fraedom.com/: (6, 'Could not resolve host: www2.fraedom.com')
+
+	Other Fraedom rulesets:
+
+		- fraedom-cdn.com.xml
+
+
+	Problematic hosts in *fraedom.com:
+
+		- www2 ᵐ
+
+	ᵐ Pardot / mismatched
+
+
+	Partially covered hosts in *fraedom.com:
+
+		- www2
+
+
+	Insecure cookies are set for these hosts:
+
+		- fraedom.com
+		- www.fraedom.com
+
+-->
+<ruleset name="Fraedom.com (partial)">
+
+	<!--	Direct rewrites:
+				-->
+	<target host="fraedom.com" />
+	<target host="control.fraedom.com" />
+	<target host="www.fraedom.com" />
+
+	<!--	Complications:
+				-->
+	<!-- target host="www2.fraedom.com" /-->
+
+
+	<!--	Not secured by server:
+					-->
+	<!--securecookie host="^(?:www\.)?fraedom\.com$" name="^NVOYX$" /-->
+
+	<securecookie host="^\." name="^_gat?$" />
+	<securecookie host="^\w" name=".+" />
+
+	<rule from="^http:"
+		to="https:" />
+
+</ruleset>

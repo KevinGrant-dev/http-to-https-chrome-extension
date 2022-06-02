@@ -1,0 +1,23 @@
+<!--
+	Problematic subdomains:
+
+		- ^	(mismatched, CN: www.)
+
+
+	Some pages redirect to http.
+
+-->
+<ruleset name="DMLP.org (partial)">
+
+	<target host="citmedialaw.org" />
+	<target host="www.citmedialaw.org" />
+	<target host="dmlp.org" />
+	<target host="www.dmlp.org" />
+
+	<test url="http://dmlp.org/favicon.ico" />
+	<test url="http://www.dmlp.org/favicon.ico" />
+
+	<rule from="^http://(?:www\.)?([^/]+)/"
+		to="https://www.$1/" />
+
+</ruleset>
